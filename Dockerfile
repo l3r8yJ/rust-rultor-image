@@ -104,7 +104,8 @@ RUN apt-get -y install ssh=1:8.2p1-4ubuntu0.5
 RUN mkdir /var/run/sshd && \
   chmod 0755 /var/run/sshd
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Rust
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Clean up
 RUN rm -rf /tmp/*
